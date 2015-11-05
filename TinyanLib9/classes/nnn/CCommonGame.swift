@@ -233,7 +233,7 @@ public class CCommonGame
 	{
 		if m_gamecenterFlag
 		{
-			if GKLocalPlayer.localPlayer().authenticated
+			if myGKLocalPlayer.localPlayer().authenticated
 			{
 				return true
 			}
@@ -244,7 +244,7 @@ public class CCommonGame
 	
 	public func reportAchievement(percent:Double , identifier : String , popup : Bool)
 	{
-		if GKLocalPlayer.localPlayer().authenticated
+		if myGKLocalPlayer.localPlayer().authenticated
 		{
 			let achievement = GKAchievement(identifier: identifier)
 			achievement.percentComplete = percent
@@ -267,7 +267,7 @@ public class CCommonGame
 	
 	public func reportAchievement(percent:Double , identifier : String , title:String , message:String)
 	{
-		if GKLocalPlayer.localPlayer().authenticated
+		if myGKLocalPlayer.localPlayer().authenticated
 		{
 			let achievement = GKAchievement(identifier: identifier)
 			achievement.percentComplete = percent
@@ -289,7 +289,7 @@ public class CCommonGame
 	
 	public func reportScrore(score : Int64 , identifier : String)
 	{
-		if GKLocalPlayer.localPlayer().authenticated
+		if myGKLocalPlayer.localPlayer().authenticated
 		{
 			let scoreReporter = GKScore(leaderboardIdentifier: identifier)
 			scoreReporter.value = score

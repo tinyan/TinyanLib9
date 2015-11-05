@@ -10,12 +10,15 @@ import Foundation
 import AVFoundation
 
 
+import OpenAL
 
 let MY_OAL_SOUND_MAX = 256
 
 public class CCommonSoundControl
 {
 	var m_soundMax : Int
+	
+	var a : ALuint = 0
 	
 	
 	

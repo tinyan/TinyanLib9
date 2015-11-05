@@ -267,6 +267,31 @@ public class CCommonGeneral : SKScene
 		return false
 	}
 	
+	public func loadSptite(json:CCommonJsonObject,key:String) -> CCommonSpriteCutter
+	{
+		var filename = "dummy"
+		var nx = 1
+		var ny = 1
+		
+		if var _ : AnyObject = json.getAnyObject(key)
+		{
+			getInitParam(json, name: &filename, keyList: key,"filename")
+			
+			if var picNumber : [Int] = json.getArrayObject(keyList:key,"picNumber")
+			{
+				if picNumber.count > 0
+				{
+					nx = picNumber[0];
+				}
+				if picNumber.count > 1
+				{
+					ny = picNumber[1];
+				}
+			}
+		}
+
+		return CCommonSpriteCutter.init(filename: filename, x: nx, y: ny)
+	}
 	
 	/*
 	public func getInitCGPoint(json:CCommonJsonObject,inout name:CGPoint,keyList:String...) -> Bool

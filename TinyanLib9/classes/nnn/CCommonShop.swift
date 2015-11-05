@@ -803,62 +803,72 @@ public class CCommonShop : CCommonGeneral , SKProductsRequestDelegate , SKPaymen
 		}
 	}
 	
+	public func myOkDialog(title:String? , message:String?)
+	{
+		let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.Alert)
+		let action = UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil)
+		alert.addAction(action)
+		let controller = UIApplication.sharedApplication().keyWindow?.rootViewController
+		controller?.presentViewController(alert, animated: true, completion: nil)
+	}
 	
 	public func printNoResponseError()
 	{
 		printDebugMessage("error1")
-		let alert = UIAlertView()
-		alert.title = "Error"
-		alert.message = "No response"
-		alert.addButtonWithTitle("OK")
-		alert.show()
+		myOkDialog("Error", message: "No response")
 	}
 	
 	public func printProductIDError()
 	{
 		printDebugMessage("error2")
-		let alert = UIAlertView()
-		alert.title = "Error"
-		alert.message = "ID Error"
-		alert.addButtonWithTitle("OK")
-		alert.show()
+		myOkDialog("Error", message: "ID Error")
+//		let alert = UIAlertView()
+//		alert.title = "Error"
+//		alert.message = "ID Error"
+//		alert.addButtonWithTitle("OK")
+//		alert.show()
 	}
 	
 	public func printFail()
 	{
 		printDebugMessage("Fail")
-		let alert = UIAlertView()
-		alert.title = "error"
-		alert.message = "Fail"
-		alert.addButtonWithTitle("OK")
-		alert.show()
+		myOkDialog("Error", message: "Fail")
+//		let alert = UIAlertView()
+//		alert.title = "error"
+//		alert.message = "Fail"
+//		alert.addButtonWithTitle("OK")
+//		alert.show()
 	}
 	
 	public func printPurchaseOk()
 	{
-		let alert = UIAlertView()
-		alert.title = "ok"
-		alert.message = "buy complete"
-		alert.addButtonWithTitle("OK")
-		alert.show()
+//		let alert = UIAlertView()
+		myOkDialog("Error", message: "buy complete")
+//		alert.title = "ok"
+//		alert.message = "buy complete"
+//		alert.addButtonWithTitle("OK")
+//		alert.show()
 	}
 	
 	public func printRestoreOk()
 	{
-		let alert = UIAlertView()
-		alert.title = "ok"
-		alert.message = "Restore succeed"
-		alert.addButtonWithTitle("OK")
-		alert.show()
+		myOkDialog("Error", message: "Restore succeed")
+		//		let alert = UIAlertView()
+		
+//		alert.title = "ok"
+//		alert.message = "Restore succeed"
+//		alert.addButtonWithTitle("OK")
+//		alert.show()
 	}
 	
 	public func printCannotRestoreNotBuy()
 	{
-		let alert = UIAlertView()
-		alert.title = "error"
-		alert.message = "cannot restore, It's not purchased item"
-		alert.addButtonWithTitle("OK")
-		alert.show()
+		myOkDialog("Error", message: "Restore succeed")
+//		let alert = UIAlertView()
+//		alert.title = "error"
+//		alert.message = "cannot restore, It's not purchased item"
+//		alert.addButtonWithTitle("OK")
+//		alert.show()
 	}
 	
 	

@@ -55,7 +55,7 @@ public class CCommonGamecenterDataControl
 			return
 		}
 		
-		localPlayer = GKLocalPlayer.localPlayer()
+		localPlayer = myGKLocalPlayer.localPlayer()
 		
 		localPlayer?.authenticateHandler =
 		{
@@ -168,7 +168,7 @@ public class CCommonGamecenterDataControl
 		}
 		
 		
-		if GKLocalPlayer.localPlayer().authenticated
+		if myGKLocalPlayer.localPlayer().authenticated
 		{
 			m_achievementLoadingFlag = true
 		//	println("bb")

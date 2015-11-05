@@ -6,6 +6,7 @@
 //  Copyright (c) 2014 bugnekosoft. All rights reserved.
 //
 
+import UIKit
 import Foundation
 import iAd
 
@@ -29,21 +30,35 @@ public class CCommonBannerViewController : CCommonViewController , ADBannerViewD
 		mySetup()
 	}
 
+	
+	override public func willTransitionToTraitCollection(newCollection: UITraitCollection, withTransitionCoordinator coordinator: UIViewControllerTransitionCoordinator)
+	{
+	//	print("turn")
+	}
+	
 	public func mySetup()
 	{
 		m_banner = ADBannerView(adType: ADAdType.Banner)
 		
-		let frame = UIScreen.mainScreen().applicationFrame
-		let height :CGFloat = m_banner.frame.size.height
-		_ = frame.size.width
-		/*
-		if (self.interfaceOrientation == UIInterfaceOrientation.LandscapeLeft) || (self.interfaceOrientation == UIInterfaceOrientation.LandscapeRight)
-		{
-			width = frame.size.height
-		}
-		*/
 		
-		m_banner.frame = CGRectMake(0, -height, frame.size.width, height)
+		
+		//var frame = UIScreen.mainScreen().applicationFrame
+		let frame = view.frame
+		let height :CGFloat = m_banner.frame.size.height
+		
+//		print("view width = \(self.view.frame.width)")
+//
+//		UIViewController
+		
+//		if (self.interfaceOrientation == UIInterfaceOrientation.LandscapeLeft) || (self.interfaceOrientation == UIInterfaceOrientation.LandscapeRight)
+//		{
+//
+//			//width = frame.size.height
+//		}
+		
+		
+//		m_banner.frame = CGRectMake(0, -height, frame.size.width, height)
+		m_banner.frame = CGRectMake(0, -height, frame.width,height)
 		m_banner.autoresizesSubviews = true
 		m_banner.autoresizingMask = [UIViewAutoresizing.FlexibleWidth, UIViewAutoresizing.FlexibleBottomMargin]
 		
@@ -163,16 +178,19 @@ public class CCommonBannerViewController : CCommonViewController , ADBannerViewD
 	public func bannerViewDidLoadAd(banner: ADBannerView!)
 	{
 		_ = banner.frame.size
-		let deviceSize = m_game.GetDeviceScreenSize()
+//		let deviceSize = m_game.GetDeviceScreenSize()
 		let height = banner.frame.size.height
-		let width = deviceSize.width
+//		let width = deviceSize.width
 		
+		let width = self.view.frame.width
 		/*
 		if (self.interfaceOrientation == UIInterfaceOrientation.LandscapeLeft) || (self.interfaceOrientation == UIInterfaceOrientation.LandscapeRight)
 		{
 			width = deviceSize.height;
 		}
 		*/
+		
+//		print("[banner width = \(banner.frame.width)]")
 		
 		banner.frame = CGRect(x:0,y:-height,width:width,height:height)
 //		banner.hidden = false
@@ -219,7 +237,7 @@ public class CCommonBannerViewController : CCommonViewController , ADBannerViewD
 	
 	public func bannerViewWillLoadAd(banner: ADBannerView!)
 	{
-		
+		print("[banner willload width = \(banner.frame.width)]")
 	}
 	
 	public func setDontPrint(flag : Bool = true)

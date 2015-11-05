@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3002DEEA1B616F00009AB603 /* myGKLocalPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3002DEE91B616F00009AB603 /* myGKLocalPlayer.swift */; };
+		3002DEEE1B622C81009AB603 /* OAL3DVector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3002DEEC1B622C81009AB603 /* OAL3DVector.swift */; };
+		3002DEEF1B622C81009AB603 /* OALControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3002DEED1B622C81009AB603 /* OALControl.swift */; };
+		3002DEF11B622E9B009AB603 /* OALData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3002DEF01B622E9B009AB603 /* OALData.swift */; };
 		30063CB71B44040F0003F5DE /* CCommonTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30B0A3791B43CD2200BE5923 /* CCommonTitle.swift */; };
 		30063CC51B440D180003F5DE /* CCommonShop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30B0A3781B43CD2200BE5923 /* CCommonShop.swift */; };
 		30063CC61B440D510003F5DE /* CCommonConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30B0A3741B43CD2200BE5923 /* CCommonConfig.swift */; };
@@ -41,6 +45,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3002DEE91B616F00009AB603 /* myGKLocalPlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = myGKLocalPlayer.swift; path = TinyanLib9/classes/util/myGKLocalPlayer.swift; sourceTree = "<group>"; };
+		3002DEEC1B622C81009AB603 /* OAL3DVector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OAL3DVector.swift; path = TinyanLib9/classes/openal/OAL3DVector.swift; sourceTree = "<group>"; };
+		3002DEED1B622C81009AB603 /* OALControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OALControl.swift; path = TinyanLib9/classes/openal/OALControl.swift; sourceTree = "<group>"; };
+		3002DEF01B622E9B009AB603 /* OALData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OALData.swift; path = TinyanLib9/classes/openal/OALData.swift; sourceTree = "<group>"; };
 		30A620281B43C80D0029C9BD /* TinyanLib9.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TinyanLib9.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		30A6202B1B43C80D0029C9BD /* TinyanLib9.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TinyanLib9.h; sourceTree = "<group>"; };
 		30A6202D1B43C80D0029C9BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -86,9 +94,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3002DEEB1B622BF1009AB603 /* openal */ = {
+			isa = PBXGroup;
+			children = (
+				3002DEF01B622E9B009AB603 /* OALData.swift */,
+				3002DEEC1B622C81009AB603 /* OAL3DVector.swift */,
+				3002DEED1B622C81009AB603 /* OALControl.swift */,
+			);
+			name = openal;
+			sourceTree = "<group>";
+		};
 		30A6201E1B43C80D0029C9BD = {
 			isa = PBXGroup;
 			children = (
+				3002DEEB1B622BF1009AB603 /* openal */,
 				30B0A38F1B43CD4A00BE5923 /* ios */,
 				30B0A3821B43CD2F00BE5923 /* util */,
 				30B0A3731B43CD0800BE5923 /* nnn */,
@@ -149,6 +168,7 @@
 				30B0A3871B43CD4300BE5923 /* CCommonSoundControl.swift */,
 				30B0A3881B43CD4300BE5923 /* CCommonSpriteCutter.swift */,
 				30A620421B43C8E10029C9BD /* CCommonJsonObject.swift */,
+				3002DEE91B616F00009AB603 /* myGKLocalPlayer.swift */,
 			);
 			name = util;
 			sourceTree = "<group>";
@@ -277,13 +297,17 @@
 				30B0A3721B43CCE600BE5923 /* CCommonViewController.swift in Sources */,
 				30063CC51B440D180003F5DE /* CCommonShop.swift in Sources */,
 				30B0A37D1B43CD2200BE5923 /* CCommonGeneral.swift in Sources */,
+				3002DEEA1B616F00009AB603 /* myGKLocalPlayer.swift in Sources */,
 				30A620431B43C8E10029C9BD /* CCommonJsonObject.swift in Sources */,
+				3002DEEE1B622C81009AB603 /* OAL3DVector.swift in Sources */,
 				30063CC71B440D560003F5DE /* CCommonOtherApp.swift in Sources */,
 				30B0A3701B43CCE600BE5923 /* CCommonBannerViewController.swift in Sources */,
 				30B0A38E1B43CD4300BE5923 /* CCommonSpriteCutter.swift in Sources */,
 				30063CC61B440D510003F5DE /* CCommonConfig.swift in Sources */,
 				30B0A36F1B43CCE600BE5923 /* CCommonAppDelegate.swift in Sources */,
 				30B0A38B1B43CD4300BE5923 /* CCommonMenu.swift in Sources */,
+				3002DEEF1B622C81009AB603 /* OALControl.swift in Sources */,
+				3002DEF11B622E9B009AB603 /* OALData.swift in Sources */,
 				30B0A38D1B43CD4300BE5923 /* CCommonSoundControl.swift in Sources */,
 				30B0A3891B43CD4300BE5923 /* CCommonButton.swift in Sources */,
 				30063CB71B44040F0003F5DE /* CCommonTitle.swift in Sources */,
@@ -350,9 +374,10 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -392,8 +417,9 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -419,7 +445,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.bugnekosoft.TinyanLib9;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "3a81db44-d00b-46b5-8fe9-cec0949cfdd5";
 				SKIP_INSTALL = NO;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -442,7 +468,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.bugnekosoft.TinyanLib9;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "3a81db44-d00b-46b5-8fe9-cec0949cfdd5";
 				SKIP_INSTALL = NO;
 			};
 			name = Release;
